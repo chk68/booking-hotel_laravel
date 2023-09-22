@@ -1,0 +1,113 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.hotels {
+    display: flex;
+    flex-direction: column; /* Изменение направления списка на вертикальное */
+    align-items: center; /* Центрирование по горизонтали */
+    margin-top: 2rem;
+}
+
+.hotel {
+    display: flex;
+    justify-content: space-between; /* Распределение между отелем и ценой */
+    align-items: center; /* Выравнивание по вертикали */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0; /* Изменение отступов для вертикального списка */
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-details {
+    flex-grow: 1; /* Занимать оставшееся пространство */
+}
+
+.hotel-price {
+    flex-shrink: 0; /* Не уменьшать размер */
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Стили для красного блока */
+.red-box {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Стили для скрытого блока */
+.hidden {
+    display: none;
+}
+
+.room {
+    margin-bottom: 20px;
+}
+
+.room h3 {
+    margin: 0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.bookings-list {
+    list-style: none;
+    padding: 0;
+}
+
+.bookings-list li {
+    margin-bottom: 10px;
+}
+
+
+ .room-header {
+     cursor: pointer;
+     background-color: #f0f0f0;
+     border-radius: 10px;
+     padding: 10px;
+     margin: 10px 0;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+.room-info {
+    display: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.room-header p {
+    margin: 0;
+}
