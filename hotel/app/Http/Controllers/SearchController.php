@@ -35,7 +35,11 @@ class SearchController extends Controller
         $availableHotels = DB::table('hotels')
             ->whereIn('id', $hotelIds)
             ->get();
-
+        foreach ($availableHotels as $hotel) {
+            $hotel->rooms = DB::table('rooms')
+                ->where('hotel_id', $hotel->id)
+                ->get();
+        }
         return view('search.show', compact('availableHotels', 'start_date', 'end_date'));
     }
 }

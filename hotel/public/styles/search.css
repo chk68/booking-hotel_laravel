@@ -1,0 +1,58 @@
+/* Стили для списка отелей */
+.hotel-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Стили для каждого отдельного отеля */
+.hotel-item {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Стили для изображения отеля */
+.hotel-image img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Стили для деталей отеля */
+.hotel-details {
+    flex: 1;
+}
+
+/* Стили для названия отеля */
+.hotel-details h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* Стили для описания отеля */
+.hotel-details p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Стили для информации о ценах и кнопки "Забронировать" */
+.hotel-booking {
+    text-align: right;
+}
+
+/* Стили для кнопки "Забронировать" */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

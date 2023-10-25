@@ -17,11 +17,11 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('room_id')->default(0); // Здесь 0 - это значение по умолчанию
+            $table->unsignedBigInteger('room_id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->date('check_in')->default(now());
-            $table->date('check_out')->default(now());
+            $table->date('check_in');
+            $table->date('check_out');
             $table->string('status')->default(Booking::STATUS_ACTIVE);
             $table->timestamps();
         });

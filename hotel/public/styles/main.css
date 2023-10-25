@@ -1,0 +1,62 @@
+/* Стили для обертки отелей, чтобы их центрировать */
+.hotels-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Отступ между отелями */
+}
+
+/* Стили для каждого отеля (полукруглый блок) */
+.hotel {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Ширина блока с отелем */
+    text-align: center;
+    margin-top: 20px; /* Отступ сверху между отелями */
+}
+
+.hotel-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* Стили для названия отеля */
+.hotel h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Стили для цены отеля */
+.hotel-price p {
+    margin: 0;
+    font-size: 14px;
+    color: #007bff; /* Цвет текста цены (синий) */
+}
+
+/* Стили для надписи "Нет доступных комнат" */
+.hotel .no-rooms {
+    color: #ff0000; /* Цвет текста (красный) */
+    font-weight: bold;
+}
+
+
+/* Стили для обертки блока поиска */
+.search-hotels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px; /* Отступ сверху */
+}
+/* Стили для формы поиска */
+#search-form {
+    background-color: #0b4483; /* Голубой цвет фона */
+    padding: 5px; /* Поля вокруг формы */
+    border-radius: 10px; /* Скругление углов */
+    color: white;
+}

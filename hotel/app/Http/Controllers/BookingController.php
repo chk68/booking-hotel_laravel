@@ -21,47 +21,22 @@ class BookingController extends Controller
         ]);
     }
 
-
-    public function make(Request $request, $roomId)
+    public function make(Request $request)
     {
         // Проверяем, авторизован ли пользователь
         if (auth()->check()) {
             $user = auth()->user();
 
-            // Создаем бронирование
-            $booking = new Booking([
-                'user_id' => $user->id,
-                'room_id' => $roomId,
-                'check_in' => $request->input('check_in'),
-                'check_out' => $request->input('check_out'),
-                // Другие атрибуты бронирования
-            ]);
+            // Получаем данные из строки запроса
+            $roomId = $request->input('room_id'); // Обратите внимание, что это должно быть 'room_id', а не 'roomId' из строки запроса
 
-            $booking->save();
-
-            return redirect()->route('rooms.show', ['room' => $roomId])
-                ->with('success', 'Комната успешно забронирована!');
-
-        } else {
-            // Если пользователь не авторизован, можно перенаправить на страницу авторизации
-            return redirect()->route('login')->with('error', 'Для бронирования комнаты необходимо авторизоваться.');
-        }
-    }
-
-    public function store(Request $request)
-    {
-        // Проверяем, авторизован ли пользователь
-        if (auth()->check()) {
-            // Получаем данные из формы
-            $userId = auth()->user()->id;
-            $roomId = $request->input('room_id');
             $checkIn = $request->input('check_in');
             $checkOut = $request->input('check_out');
             $hotelId = $request->input('hotel_id');
 
-            // Создаем запись в таблице "bookings"
+            // Создаем бронирование
             $booking = new Booking([
-                'user_id' => $userId,
+                'user_id' => $user->id,
                 'room_id' => $roomId,
                 'check_in' => $checkIn,
                 'check_out' => $checkOut,
@@ -71,11 +46,17 @@ class BookingController extends Controller
 
             $booking->save();
 
-            return redirect()->route('rooms.show', ['hotel' => $hotelId, 'room' => $roomId])
+            return redirect()->route('rooms.show', ['room' => $roomId, 'hotel' => $hotelId])
                 ->with('success', 'Комната успешно забронирована!');
         } else {
             // Если пользователь не авторизован, можно перенаправить на страницу авторизации
             return redirect()->route('login')->with('error', 'Для бронирования комнаты необходимо авторизоваться.');
         }
     }
+
+
+
+
+
+
 }

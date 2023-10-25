@@ -7,8 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
-    public function bookings()
+    public function hotel()
+    {
+        return $this->belongsTo(Hotel::class);
+    }
+
+    public function booking()
     {
         return $this->hasMany(Booking::class);
     }
+
+    protected $fillable = ['type', 'description', 'amenities', /* другие поля */];
+
+
 }

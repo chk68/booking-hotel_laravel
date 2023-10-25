@@ -15,7 +15,7 @@ class BookingsTableSeeder extends Seeder
     public function run()
     {
         Booking::create([
-         'room_id' => 2,
+            'room_id' => 3,
         'user_id' => 1	,
         'check_in'	=> '2023.08.08',
         'check_out' => '2023.09.09',

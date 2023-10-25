@@ -50,6 +50,9 @@
     <div class="hotels-info">
         @foreach($hotels as $hotel)
             <div class="hotel">
+                <div class ="hotel-image">
+                    <img src="{{ asset('storage/' . $hotel->image_path) }}" alt="Изображение отеля">
+                </div>
                 <div class="hotel-details">
                     <h2><a href="{{ route('rooms.show', ['hotel' => $hotel]) }}">{{ $hotel->name }}</a></h2>
                 </div>
@@ -66,6 +69,7 @@
 
     @push('styles')
         <link href="{{ asset('styles/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/main.css') }}" rel="stylesheet">
     @endpush
 
 @endsection

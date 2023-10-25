@@ -12,10 +12,10 @@ class Hotel extends Model
     {
         return $this->hasMany(Room::class);
     }
-
-    public function bookings()
-    {
-        return $this->hasManyThrough(Booking::class, Room::class);
-    }
-
+    protected $fillable = [
+        'name',
+        'description',
+        'amenities',
+        'image_path'
+    ];
 }

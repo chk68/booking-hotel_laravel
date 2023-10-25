@@ -1,5 +1,4 @@
-
-
+/* Общие стили для body и header/footer */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,107 +6,82 @@ body {
 }
 
 .header {
-    background-color: #333;
+    background-color: #0b4483;
     color: #fff;
+    padding: 10px 0;
+}
+
+/* Стили для футера */
+.footer {
+    background-color: #ffffff;
+    color: #0b4483;
+    padding: 10px 0;
     text-align: center;
-    padding: 1rem 0;
-}
-
-.hotels {
-    display: flex;
-    flex-direction: column; /* Изменение направления списка на вертикальное */
-    align-items: center; /* Центрирование по горизонтали */
-    margin-top: 2rem;
-}
-
-.hotel {
-    display: flex;
-    justify-content: space-between; /* Распределение между отелем и ценой */
-    align-items: center; /* Выравнивание по вертикали */
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem 0; /* Изменение отступов для вертикального списка */
     width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
-.hotel-details {
-    flex-grow: 1; /* Занимать оставшееся пространство */
+
+
+/* Стиль для логотипа */
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px; /* Отступ слева */
 }
 
-.hotel-price {
-    flex-shrink: 0; /* Не уменьшать размер */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h2 {
-    margin: 0;
+/* Стили для навигационных ссылок в хедере */
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
 
-p {
-    margin: 0;
-    font-size: 14px;
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Стили для красного блока */
-.red-box {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
+/* Стили для блока с кнопками "Регистрация" и "Вход" */
+.auth-links {
+    display: flex;
+    gap: 20px;
 }
 
-/* Стили для скрытого блока */
-.hidden {
-    display: none;
-}
-
-.room {
-    margin-bottom: 20px;
-}
-
-.room h3 {
-    margin: 0;
-}
-
-.btn-primary {
+/* Стиль для кнопок "Регистрация" и "Вход" */
+.register-link, .login-link {
     background-color: #007bff;
     color: #fff;
-    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 20px; /* Отступ справа */
 }
 
-.btn-primary:hover {
+
+.register-link:hover, .login-link:hover {
     background-color: #0056b3;
 }
 
-.bookings-list {
-    list-style: none;
-    padding: 0;
+/* Стиль для имени пользователя */
+.user-link {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px; /* Отступ справа */
 }
 
-.bookings-list li {
-    margin-bottom: 10px;
-}
-
-
- .room-header {
-     cursor: pointer;
-     background-color: #f0f0f0;
-     border-radius: 10px;
-     padding: 10px;
-     margin: 10px 0;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
-
-.room-info {
-    display: none;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    margin: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.room-header p {
-    margin: 0;
+/* Стили для основного контента */
+main {
+    padding: 20px;
+    margin: 20px; /* Отступы от краев */
 }
